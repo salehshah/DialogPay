@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Dialogpay</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>We request calendar access to help users manage appointments, schedule customer interactions, and organize events directly within the app.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We request camera access to enable users to capture and upload high-quality photos, enhancing the functionality of features like profile updates, document uploads, and visual sharing within the app.</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>We request file access to allow users to upload, view, and share PDF documents securely, supporting key app features like document sharing and efficient communication.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We request location access to provide location-based personalization and improve user experiences, such as identifying nearby services and tailoring app content to your location.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We request microphone access to facilitate voice messaging and communication, enabling seamless audio interaction between users and customer support within the app.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We request access to your photo library to enable you to select and upload photos for use in features like profile updates, document submissions, and chat interactions.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>We use tracking to deliver personalized experiences and better understand user engagement across our app and connected platforms. This data helps us improve app functionality and tailor services to your preferences.</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen.storyboard</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>dialogpay://</string>
+	</array>
+</dict>
+</plist>
