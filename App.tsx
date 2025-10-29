@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react'
 import {
   ActivityIndicator,
   Dimensions,
@@ -15,8 +15,9 @@ import {
   Platform,
   StyleSheet,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 
 import {WebView} from 'react-native-webview';
 import SplashScreen from 'react-native-splash-screen';
@@ -30,6 +31,7 @@ import {
 function App(): React.JSX.Element {
   const {isConnected} = useNetInfo();
   const [loading, setLoading] = useState(true);
+  const [load, setLoad] = useState(false);
 
   let WebViewRef: any;
 
@@ -37,6 +39,7 @@ function App(): React.JSX.Element {
     const getPersmissions = async () => {
       if (Platform.OS === 'android') {
         await PermissionsAndroid.requestMultiple([
+          PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
           PermissionsAndroid.PERMISSIONS.CAMERA,
           PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
           PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
@@ -45,6 +48,11 @@ function App(): React.JSX.Element {
     };
     getPersmissions();
   }, []);
+
+  useEffect(() => {
+    setLoad(true)
+
+  },[2000])
 
   useEffect(() => {
     const requestTrackingPermissions = async () => {
@@ -105,7 +113,7 @@ function App(): React.JSX.Element {
           </LinearGradient>
         ) : null}
 
-        <WebView
+       {load && <WebView
           ref={WEBVIEW_REF => (WebViewRef = WEBVIEW_REF)}
           source={{uri: 'https://www.dialogpay.net/login/'}}
           style={styles.webViewContainer}
@@ -140,7 +148,7 @@ function App(): React.JSX.Element {
               openPaymentsUrl('https://www.dialogpay.com/more/');
             }
           }}
-        />
+        />}
       </View>
     );
   }
